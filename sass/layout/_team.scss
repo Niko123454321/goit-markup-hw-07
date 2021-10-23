@@ -1,0 +1,88 @@
+.card-set-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.box {
+  background-color: var(--box-buck-color);
+}
+
+.box-caption {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.box-item {
+  padding-bottom: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: var(--card-shadow);
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+
+  background-color: var(--primary-white-color);
+}
+
+.box-item .img {
+  margin-bottom: 30px;
+}
+
+.box-item .master {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.box-item .desc {
+  text-align: center;
+  font-size: 16px;
+  color: var(--primary-text-color);
+}
+
+.box-join .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--box-svg);
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box-svg {
+  display: flex;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.box-join .link:hover,
+.box-join .link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+.box-join {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 270px;
+}
+
+.box-join-list:not(:last-child) {
+  margin-right: 10px;
+}
