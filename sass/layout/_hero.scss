@@ -5,6 +5,36 @@
   background-color: var(--hiro-text-buck-color);
   letter-spacing: 0.06em;
   text-align: center;
+
+  & .text {
+    margin-bottom: 30px;
+    color: var(--primary-white-color);
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 136%;
+  }
+
+  & .button {
+    border-radius: 4px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border: none;
+
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 190%;
+    box-shadow: var(--box-shadow);
+
+    &:hover,
+    &:focus {
+      background-color: var(--button-submit);
+    }
+  }
 }
 
 .overlay {
@@ -21,34 +51,4 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.hero-text .text {
-  margin-bottom: 30px;
-  color: var(--primary-white-color);
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 136%;
-}
-
-.hero-text .button {
-  border-radius: 4px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  border: none;
-
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 190%;
-  box-shadow: var(--box-shadow);
-}
-
-.hero-text .button:hover,
-.hero-text .button:focus {
-  background-color: var(--button-submit);
 }

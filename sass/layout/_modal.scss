@@ -37,11 +37,11 @@
   border-radius: 50%;
   top: 10px;
   right: 10px;
-}
 
-.backdrop-close:hover,
-.backdrop-close:focus {
-  fill: var(--modal-input);
+  &:hover,
+  &:focus {
+    fill: var(--modal-input);
+  }
 }
 
 .modal {
@@ -84,6 +84,16 @@
   border: 1px solid var(--modal-input-border);
   box-sizing: border-box;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--modal-input);
+  }
+
+  &:hover ~ .modal-svg,
+  &:focus ~ .modal-svg {
+    fill: var(--modal-input);
+  }
 }
 
 .modal-label-text {
@@ -107,11 +117,11 @@
   border: 1px solid var(--modal-input-border);
   box-sizing: border-box;
   border-radius: 4px;
-}
 
-.textarea:focus,
-.textarea:hover {
-  border: 1px solid var(--modal-input);
+  &:focus,
+  &:hover {
+    border: 1px solid var(--modal-input);
+  }
 }
 
 .modal .checkbox {
@@ -124,6 +134,18 @@
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+
+  &:hover + .checkbox-icon,
+  &:focus + .checkbox-icon {
+    border: 2px solid var(--modal-input);
+  }
+
+  &:checked + .checkbox-icon {
+    border: none;
+    background: var(--accent-color);
+    background-image: url(../images/icons.svg/icon-check.svg);
+    background-origin: border-box;
+  }
 }
 
 .modal-label-checkbox {
@@ -139,18 +161,6 @@
   height: 15px;
   border-radius: 2px;
   border: 2px solid var(--modal-svg);
-}
-
-.checkbox:checked + .checkbox-icon {
-  border: none;
-  background: var(--accent-color);
-  background-image: url(../images/icons.svg/icon-check.svg);
-  background-origin: border-box;
-}
-
-.checkbox:hover + .checkbox-icon,
-.checkbox:focus + .checkbox-icon {
-  border: 2px solid var(--modal-input);
 }
 
 .modal .checkbox-accent {
@@ -180,11 +190,11 @@
   box-shadow: var(--button-submit-shadow);
   border-radius: 4px;
   border: none;
-}
 
-.modal .button-submit:hover,
-.modal .button-submit:focus {
-  background-color: var(--button-submit);
+  &:hover,
+  &:focus {
+    background-color: var(--button-submit);
+  }
 }
 
 .modal .modal-div {
@@ -216,14 +226,4 @@
   top: 50%;
   left: 13.5px;
   fill: var(--modal-svg);
-}
-
-.modal-input:hover,
-.modal-input:focus {
-  border: 1px solid var(--modal-input);
-}
-
-.modal-input:hover ~ .modal-svg,
-.modal-input:focus ~ .modal-svg {
-  fill: var(--modal-input);
 }
