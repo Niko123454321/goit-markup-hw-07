@@ -2,12 +2,13 @@
   line-height: 1.19%;
   border-bottom: 1px solid var(--border);
 }
-.header-nav {
+
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.container-header {
+.header__nav {
   display: flex;
   align-items: center;
 }
@@ -18,7 +19,7 @@
   font-weight: 700;
   color: var(--accent-color);
 
-  & .accent {
+  & .logo__accent {
     color: var(--title-text-color);
   }
 }
@@ -74,14 +75,14 @@
   color: var(--primary-text-color);
 }
 
-.contact .envelope {
+.contact .contact__envelope {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contact .smartphone {
+.contact .contact__smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
