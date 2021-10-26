@@ -1,8 +1,12 @@
 @import './utils/vars';
-@import './basy/reset';
-@import './basy/common';
+@import './base/reset';
+@import './base/common';
 @import './utils/hidden';
 @import './components/container';
+@import './components/logo';
+@import './components/_sections-title.cscc';
+@import './components/section';
+@import './components/social-link';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/features';

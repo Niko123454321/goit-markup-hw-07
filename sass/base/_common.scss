@@ -1,3 +1,13 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--title-text-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
 /* Свойства для корректного отображения картинок */
 img {
   display: block;
@@ -16,15 +26,6 @@ button {
 
 textarea {
   resize: none;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--title-text-color);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 
 /* Класс для обнуления базовых свойств у списков (ul) */

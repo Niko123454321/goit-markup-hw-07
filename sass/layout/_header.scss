@@ -13,17 +13,6 @@
   align-items: center;
 }
 
-.logo {
-  font-family: raleway;
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--accent-color);
-
-  & .logo__accent {
-    color: var(--title-text-color);
-  }
-}
-
 .site-nav {
   display: flex;
   line-height: 110%;
