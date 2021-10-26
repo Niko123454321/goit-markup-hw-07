@@ -9,12 +9,12 @@
   --primary-white-color: #ffffff;
   --footer-contact-color: rgb(160, 150, 150);
   --footer-buck-color: #2f303a;
-  --box-buck-color: #f5f4fa;
+  --team-buck-color: #f5f4fa;
   --border: #ececec;
   --border-projecc: #eeeeee;
   --linear-gradient: rgba(47, 48, 58, 0.4);
   --footer-svg: rgba(255, 255, 255, 0.1);
-  --box-svg: #afb1b8;
+  --team-svg: #afb1b8;
   --button-submit: #188ce8;
   --backdrop-rgba: rgba(0, 0, 0, 0.2);
   --work-rgba: rgba(47, 48, 58, 0.8);
@@ -28,6 +28,17 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --card-set-gap: 30px;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 html {
@@ -98,17 +109,6 @@ textarea {
   color: inherit;
 }
 
-.hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
 .container {
   width: 1200px;
   padding-right: 15px;
@@ -130,6 +130,69 @@ textarea {
 
 .logo .logo--accent-white {
   color: var(--primary-white-color);
+}
+
+.card-set-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 42px;
+  color: var(--modal-svg);
+  font-weight: 700;
+}
+
+.team-join .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--team-svg);
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-join .link:hover, .team-join .link:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+
+.team-join .link-footer {
+  fill: var(--primary-white-color);
+  background-color: var(--footer-svg);
+}
+
+.team-join {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.team-join-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-svg {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.team-join-footer {
+  justify-content: flex-start;
 }
 
 .header {
@@ -296,7 +359,7 @@ textarea {
   align-items: center;
   justify-content: center;
   height: 120px;
-  background-color: var(--box-buck-color);
+  background-color: var(--team-buck-color);
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -305,11 +368,6 @@ textarea {
   padding: 0;
   width: 70px;
   height: 70px;
-}
-
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
 }
 
 .work {
@@ -350,33 +408,11 @@ textarea {
   margin-left: calc(-1 * var(--card-set-gap));
 }
 
-.subject {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 42px;
-  color: var(--title-text-color);
-  font-weight: 700;
+.team {
+  background-color: var(--team-buck-color);
 }
 
-.card-set-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
-}
-
-.box {
-  background-color: var(--box-buck-color);
-}
-
-.box-caption {
-  margin-bottom: 50px;
-  text-align: center;
-  font-size: 42px;
-  font-weight: 700;
-}
-
-.box-item {
+.team-item {
   padding-bottom: 30px;
   flex-basis: calc(100% / 4 - 30px);
   margin-top: 30px;
@@ -388,56 +424,21 @@ textarea {
   background-color: var(--primary-white-color);
 }
 
-.box-item .img {
+.team-item .img {
   margin-bottom: 30px;
 }
 
-.box-item .master {
+.team-item .master {
   margin-bottom: 10px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
 }
 
-.box-item .desc {
+.team-item .desc {
   text-align: center;
   font-size: 16px;
   color: var(--primary-text-color);
-}
-
-.box-join .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: var(--box-svg);
-  background-color: var(--primary-white-color);
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.box-join .link:hover, .box-join .link:focus {
-  background-color: var(--accent-color);
-  fill: var(--primary-white-color);
-}
-
-.box-svg {
-  display: flex;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
-
-.box-join {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 270px;
-}
-
-.box-join-list:not(:last-child) {
-  margin-right: 10px;
 }
 
 .clients {
@@ -448,7 +449,7 @@ textarea {
   margin-left: 30px;
 }
 
-.clients-list {
+.clients-icon {
   width: 106px;
   height: 60px;
 }
@@ -460,9 +461,9 @@ textarea {
   cursor: pointer;
   width: 170px;
   height: 91px;
-  fill: var(--box-svg);
+  fill: var(--team-svg);
   border-radius: 4px;
-  border: 1px solid var(--box-svg);
+  border: 1px solid var(--team-svg);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -524,42 +525,6 @@ textarea {
   text-transform: uppercase;
   color: var(--primary-white-color);
   margin-bottom: 20px;
-}
-
-.footer-svg-bg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  background-color: var(--footer-svg);
-  border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-svg-bg:hover, .footer-svg-bg:focus {
-  background-color: var(--accent-color);
-}
-
-.footer-join-list + .footer-join-list {
-  margin-left: 10px;
-}
-
-.footer-svg {
-  width: 20px;
-  height: 20px;
-}
-
-.footer-join {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-join-svg {
-  fill: var(--primary-white-color);
-  width: 20px;
-  height: 20px;
 }
 
 .footer-input {
@@ -649,7 +614,7 @@ textarea {
   margin-left: 30px;
 }
 
-.project-div {
+.project-wraper {
   position: relative;
   overflow: hidden;
 }
@@ -668,7 +633,7 @@ textarea {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   background-color: rgba(33, 150, 243, 0.9);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item .link {
@@ -768,7 +733,7 @@ textarea {
   padding: 40px;
   border-radius: 4px;
   background-color: var(--primary-white-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-tetle-text {
@@ -785,7 +750,6 @@ textarea {
   cursor: pointer;
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
   padding-left: 42px;
   padding-right: 15px;
   padding-top: 12px;
@@ -902,6 +866,7 @@ textarea {
 
 .modal .modal-div {
   position: relative;
+  margin-bottom: 10px;
 }
 
 .modal .modal-svg-name {

@@ -1,16 +1,8 @@
-.card-set-list {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+.team {
+  background-color: var(--team-buck-color);
 }
 
-.box {
-  background-color: var(--box-buck-color);
-}
-
-.box-item {
+.team-item {
   padding-bottom: 30px;
   flex-basis: calc(100% / 4 - 30px);
   margin-top: 30px;
@@ -24,26 +16,19 @@
   background-color: var(--primary-white-color);
 }
 
-.box-item .img {
+.team-item .img {
   margin-bottom: 30px;
 }
 
-.box-item .master {
+.team-item .master {
   margin-bottom: 10px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
 }
 
-.box-item .desc {
+.team-item .desc {
   text-align: center;
   font-size: 16px;
   color: var(--primary-text-color);
-}
-
-.box-svg {
-  display: flex;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
 }

@@ -47,7 +47,7 @@
   margin-left: 30px;
 }
 
-.project-div {
+.project-wraper {
   position: relative;
   overflow: hidden;
 }
@@ -70,7 +70,7 @@
   background-color: rgba(33, 150, 243, 0.9);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item .link {
